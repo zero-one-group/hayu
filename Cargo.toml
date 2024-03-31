@@ -1,0 +1,28 @@
+[package]
+name = "hayu"
+version = "0.1.0"
+description = "CLI tool to generate new projects from a boilerplate template"
+authors = ["Aris Ripandi <aris@zero-one-group.com>"]
+keywords = ["cli", "generate", "boilerplate", "scaffold"]
+repository = "https://github.com/zero-one-group/hayu"
+license-file = "LICENSE"
+rust-version = "1.75"
+edition = "2021"
+
+[[bin]]
+path = "src/main.rs"
+name = "hayu"
+
+[dependencies]
+anyhow = "1.0.81"
+auth-git2 = { version = "0.5.4", features = ["log"] }
+clap = { version = "4.5.3", features = ["derive"] }
+dialoguer = "0.11.0"
+git2 = "0.18.3"
+globset = { version = "0.4.14", features = ["serde"] }
+indicatif = "0.17.8"
+serde = { version = "1.0.197", features = ["derive"] }
+walkdir = "2.5.0"
+
+[dev-dependencies]
+tempfile = "3.10"
